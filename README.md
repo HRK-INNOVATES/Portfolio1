@@ -7,7 +7,7 @@
 
 A modern, responsive, and interactive professional portfolio website showcasing developer skills, projects, and contact capabilities. Built with the latest web technologies and designed with a focus on user experience and accessibility.
 
-![Portfolio Website Screenshot](./screenshot.svg)
+
 
 ## ✨ Features
 
@@ -145,9 +145,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or would like to connect, feel free to reach out through the contact form on the live site or via:
 
-- Email: your.email@example.com
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-- GitHub: [@yourusername](https://github.com/yourusername)
+- Email: hritik.innovates@gmail.com
+- LinkedIn: [HRITIK SINGH](https://www.linkedin.com/in/hritiksingh751/)
+
 
 ---
 
