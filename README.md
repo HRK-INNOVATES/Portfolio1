@@ -1,9 +1,9 @@
 # Modern Portfolio Website 🚀
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://app.netlify.com/sites/your-site-name/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-site-id/deploy-status)](https://hritikinnovates.netlify.app/)
 [![GitHub license](https://img.shields.io/github/license/yourusername/portfolio-website)](https://github.com/yourusername/portfolio-website/blob/main/LICENSE)
 
-## 🔗 [View Live Demo](https://your-portfolio-site-url.netlify.app/)
+## 🔗 [View Live Demo](https://hritikinnovates.netlify.app/)
 
 A modern, responsive, and interactive professional portfolio website showcasing developer skills, projects, and contact capabilities. Built with the latest web technologies and designed with a focus on user experience and accessibility.
 
