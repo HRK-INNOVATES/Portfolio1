@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Modern blue-purple gradient scheme */
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+  --muted: 210 40% 93%;
+  --muted-foreground: 215 25% 27%;
+  --popover: 210 40% 98%;
+  --popover-foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --primary: 262 83% 58%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 199 89% 48%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 316 70% 50%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 262 83% 58%;
+  --radius: 0.75rem;
+  
+  /* Animation Variables */
+  --transition-fast: 0.2s;
+  --transition-medium: 0.3s;
+  --transition-slow: 0.5s;
+}
+
+.dark {
+  /* Dark mode purple-blue theme */
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+  --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+  --card: 217 33% 17%;
+  --card-foreground: 210 40% 98%;
+  --border: 215 28% 17%;
+  --input: 215 28% 17%;
+  --primary: 263 70% 60%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 199 80% 55%;
+  --secondary-foreground: 210 40% 98%;
+  --accent: 316 70% 55%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 50.6%;
+  --destructive-foreground: 210 40% 98%;
+  --ring: 263 70% 60%;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* Set font display */
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom selection color */
+  ::selection {
+    @apply bg-primary/20 text-primary;
+  }
+
+  /* Theme transition */
+  .theme-transition {
+    @apply transition-colors duration-300;
+  }
+
+  /* Gradient text for emphasis - with theme-specific colors */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent relative;
+    background-size: 200% auto;
+    animation: shimmer 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+
+  /* Glass morphism effect */
+  .glass-panel {
+    @apply bg-white/10 dark:bg-white/5 backdrop-blur-md border border-white/20 rounded-xl;
+  }
+
+  /* Animated underline for links - with theme awareness */
+  .animated-underline {
+    @apply relative no-underline inline-block;
+  }
+  
+  .animated-underline::after {
+    @apply content-[''] absolute w-0 h-[2px] bg-primary dark:bg-primary bottom-0 left-0 transition-all duration-300;
+  }
+  
+  .animated-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Card hover effect - with theme-specific shadow */
+  .hover-card {
+    @apply transition-all duration-300 hover:shadow-md dark:hover:shadow-primary/5 hover:-translate-y-1;
+  }
+
+  /* Button hover effects - with theme awareness */
+  .btn-hover-effect {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  
+  .btn-hover-effect::before {
+    @apply content-[''] absolute w-full h-full bg-white/10 dark:bg-white/5 -left-full top-0 transform skew-x-12 transition-all duration-300;
+  }
+  
+  .btn-hover-effect:hover::before {
+    @apply left-full;
+  }
+
+  /* Theme-specific focus rings */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary/50 dark:ring-primary/70 ring-offset-2 ring-offset-background;
+  }
+
+  /* Theme-aware code blocks */
+  pre, code {
+    @apply bg-muted/80 dark:bg-muted text-foreground dark:text-foreground/90 p-1 rounded;
+  }
+
+  /* Content sections common styling */
+  section {
+    @apply transition-colors duration-300;
+  }
+
+  /* Improve text contrast in dark mode */
+  .dark .text-muted-foreground {
+    @apply text-opacity-90;
+  }
+
+  /* Better scrollbars */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/50;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 hover:bg-primary/50 rounded-full transition-colors;
+  }
+}
+
